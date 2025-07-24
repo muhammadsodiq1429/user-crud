@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { TABLE_ROWS } from "../../static/table-rows.js";
 import { USERS } from "../../static/users.js";
-import { v4 } from "uuid";
+import { v4 as uuidv4 } from "uuid";
 import { FaTrash } from "react-icons/fa";
 
 const UserCrud = () => {
@@ -97,7 +97,7 @@ const UserCrud = () => {
   const addUser = (event) => {
     event.preventDefault();
     const user = {
-      id: v4(),
+      id: uuidv4(),
       username,
       email,
       password,
